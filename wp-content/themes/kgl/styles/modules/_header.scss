@@ -1,0 +1,207 @@
+.container {
+	@include MQ(MD) {
+		width: 990px;
+	}
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+
+body {
+	padding-bottom: 274px;
+	font-family: $font-reg;
+}
+
+li {
+	font-size: 16px;
+}
+
+h3 {
+	color: #000;
+}
+
+
+.header {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 10;
+	
+	&--top {
+		height: 32px;
+	}
+
+	&--main-in {
+		background-color: #fff;
+		height: 68px;
+		border-radius: 5px;
+		padding: 5px 15px;
+	}
+
+	&--nav {
+		ul {
+			@include display(flex);
+			@include flex-direction(row);
+			@include justify-content(space-between);
+		}
+
+		li {
+			list-style: none;
+
+			a {
+				padding: 19px 15px;
+				display: inline-block;
+				font-size: 14px;
+				text-transform: uppercase;
+				font-family: $font-bold;
+				color: #000;
+				text-decoration: underline;
+
+
+				&:hover,
+				&:focus,
+				&:active,
+				&.active {
+					background-color: #13ac4e;
+					border-radius: 6px;
+					color: #fff;
+					text-decoration: none;
+				}	
+			}
+
+		}
+	}
+
+	.navbar-home {
+		background-color: #FFFFFF;
+		@include transform(translateY(-100%));
+		@include transition(transform .2s ease-in);
+
+		@include MQM(MD) {
+			@include transform(translateY(0));
+		}
+		&.shown {
+			@include transform(translateY(0));
+		}
+		.navbar-nav > li {
+
+			&.active {
+				a {
+					color: #fff;
+					background-color: #13ac4e;
+
+					&:hover {
+						color: #fff;
+					}
+				}
+			}
+
+			& > a {
+				color: #000;
+				text-decoration: underline;
+				@include MQM(MD) {
+					padding-left: 10px;
+					padding-right: 10px;
+				}
+
+				&:hover,
+				&:active {
+					color: #13ac4e;
+				}
+
+			}
+		}
+	}
+
+	.navbar-inner {
+		height: 65px;
+		background-color: #FFFFFF;
+		box-shadow: 0 0 3px #ccc;
+		padding: 7px 0;
+
+		.navbar-nav {
+			background-color: #fff;
+		}
+
+		.navbar-nav > li {
+
+			&.active {
+				a {
+					color: #fff;
+					background-color: #13ac4e;
+
+					&:hover {
+						color: #fff;
+					}
+				}
+			}
+
+			& > a {
+				color: #000;
+				text-decoration: underline;
+				@include MQM(MD) {
+					padding-left: 10px;
+					padding-right: 10px;
+				}
+
+				&:hover,
+				&:active {
+					color: #13ac4e;
+				}
+
+			}
+		}
+	}
+
+	.navbar-brand {
+		padding: 0 10px;
+
+		@include MQ(SM) {
+			padding: 0 15px;
+		}
+
+		img {
+			height: 90%;
+			width: auto;
+		}
+	}
+
+	.navbar-default .navbar-toggle .icon-bar {
+		background-color: #14ac4e;
+	}
+
+	.navbar-nav {
+		.lang-switcher {
+			color: #14ac4e !important;
+			margin-left: 20px;
+
+			@include MQM(SM) {
+				margin-left: 0;
+			}
+		}
+	}
+}
+
+
+
+.lang-switcher {
+	color: #14ac4e;
+	font-size: 12px;
+	line-height: 32px;
+
+	&:hover {
+		color: lighten(#14ac4e, 10%);
+	}
+	img {
+		margin-right: 5px;
+		position: relative;
+		top: -2px;
+	}
+}
+
+
+
+

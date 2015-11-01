@@ -1,0 +1,496 @@
+.no-paddings {
+	padding: 0;
+}
+
+
+
+.line-list {
+	margin-top: 20px;
+	padding: 0;
+
+	&--item {
+		display: block;
+		padding-left: 35px;
+		position: relative;
+		margin-top: 20px;
+
+		@include MQM(XS) {
+			font-size: 14px;
+		}
+
+		&:before {
+			content: "";
+			position: absolute;
+			top: 10px;
+			left:0;
+			height: 2px;
+			width: 22px;
+			background-color: #b3d333;
+		}
+	}
+}
+
+.kgl-page-content {
+  ul {
+	margin-top: 20px;
+	padding: 0;
+
+	li {
+	  display: block;
+	  padding-left: 35px;
+	  position: relative;
+	  margin-top: 20px;
+
+	  @include MQM(XS) {
+		font-size: 14px;
+	  }
+
+	  &:before {
+		content: "";
+		position: absolute;
+		top: 10px;
+		left:0;
+		height: 2px;
+		width: 22px;
+		background-color: #b3d333;
+	  }
+	}
+  }
+}
+
+.why-kgl {
+	li {
+		font-size: 19px;
+	}
+}
+
+.bullet-list {
+	margin: 0;
+	padding: 0;
+	
+	&--feature {
+		font-size: 17px;
+		line-height: 20px;
+		padding: 0 15px;
+		display: block;
+		position: relative;
+		list-style: none;
+
+		&:before {
+			content: "";
+			position: absolute;
+			top: 8px;
+			left: 0;
+			width: 8px;
+			height: 8px;
+			background-color: #14ac4e;
+			border-radius: 50%;
+		}
+
+		a {
+			color: #14ac4e;
+			text-decoration: underline;
+		}
+	}
+}
+	
+
+.content {
+	padding-top: 65px;
+	padding-bottom: 30px;
+	h1 {
+		color: #14ac4e;
+		line-height: 62px;
+		font-family: $font-bold;
+		text-transform: uppercase;
+		font-size: 48px;
+		margin-top: 40px;
+
+		@include MQM(XS) {
+			font-size: 24px;
+			line-height: 1.2;
+		}
+	}
+
+	
+
+	.news {
+		@include MQ(MD) {
+			padding-left: 85px;
+		}
+
+		h4 {
+			font-size: 22px;
+			font-family: $font-bold;
+			text-transform: uppercase;
+			margin-top: 0;
+
+			@include MQM(MD) {
+				margin-top: 50px;
+			}
+		}
+		&--item {
+			margin-top: 20px;
+
+			&-date {
+				font-size: 13px;
+			}
+
+			&-title {
+				font-size: 19px;
+				margin-top: 0;
+				margin-bottom: 0;
+				text-decoration: underline;
+				display: block;
+				color: #000;
+
+				&:hover {
+					color: #14ac4e;
+				}
+			}
+
+			&-body {
+				color: rgba(0,0,0,.5);
+				font-size: 15px;
+			}
+		}
+
+		&--more {
+			color: #14ac4e;
+			text-decoration: underline;
+		}
+	}
+
+	.hospitals, .hospitals-spec {
+		margin-top: 65px;
+		border-radius: 6px;
+		border: 3px solid #14ac4e;
+		padding: 0 58px;
+		height: 465px;
+		position: relative;
+		margin-bottom: 60px;
+
+		@include MQM(XS) {
+			padding: 0 15px;
+			height: auto;
+    		padding-bottom: 30px;
+		}
+
+		&--title {
+			font-size: 30px;
+			font-family: $font-bold;
+			line-height: 28px;
+			color: #14ac4e;
+			margin-top: -20px;
+		    background-color: white;
+		    padding: 0 10px;
+
+		    @include MQM(XS) {
+				font-size: 20px;
+				text-align: center;
+			}
+		}
+
+		&--meta {
+			font-size: 16px;
+			color: #b0b0b0;
+			font-family: $font-italic;
+			line-height: 20px;
+			padding: 0 10px;
+			margin-top: 30px;
+			margin-bottom: 20px;
+		}
+
+		ul {
+			padding: 0 10px;
+
+			li {
+				margin-bottom: 16px;
+			}
+		}
+
+		
+
+		&--text {
+			font-size: 17px;
+			line-height: 20px;
+			margin-top: 20px;
+
+			&:first-of-type {
+				margin-top: 40px;
+			}
+		}
+
+		.custom-btn {
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			width: 80%;
+			@include transform(translate(-50%, 50%));
+		}
+	}
+}
+
+.custom-btn {
+	font-size: 15px;
+	text-transform: uppercase;
+	padding: 20px 30px;
+	border-radius: 6px;
+	display: block;
+	width: 100%;
+	color: #fff;
+	font-family: $font-bold;
+	text-align: center;
+	text-decoration: underline;
+
+	&:hover {
+		color: #fff;
+	}
+
+	&-green {
+		background-color: #14ac4e;
+	}
+
+
+	&-lightgreen {
+		background-color: #b3d333;
+	}
+}
+
+.hr-head {
+	position: relative;
+	height: 1px;
+	width: 100%;
+	background-color: #b3d333;
+	margin: 60px 0;
+
+	&--title {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		@include transform(translate(-50%, -50%));
+		margin: 0;
+		text-transform: uppercase;
+		background-color: #fff;
+		color: #b3d333;
+		font-family: $font-bold;
+		font-size: 24px;
+		padding: 0 30px;
+
+		@include MQM(XS) {
+			width: 70%;
+			font-size: 16px;
+			text-align: center;
+			padding: 0;
+		}
+	}
+}
+
+
+.nav-tabs {
+	border: none;
+
+	& > li {
+		float: none;
+		margin-bottom: 3px;
+
+		&.active > a,
+		&.active > a:hover,
+		&.active > a:focus {
+			color: #14ac4e;
+		    background-color: #fff;
+		    border: 1px solid #b3d333;
+		    cursor: default;
+		    border-right: 1px solid transparent;
+		    outline: none;
+
+		    @include MQM(XS) {
+		    	overflow: hidden;
+		    	border-right: 1px solid #b3d333;
+		    }
+
+		    &:after {
+				content: "";
+				position: absolute;
+				top: 5px;
+			    right:-15px;
+			    height: 30px;
+			    width: 30px;
+			    border-top: 1px solid #b3d333;
+			    border-right: 1px solid #b3d333;
+			    @include transform(rotate(45deg));
+			}
+		}
+
+		a {
+			border-radius: 0;
+			width: 80%;
+    		border-right: 1px solid transparent;
+    		position: relative;
+    		color: #000;
+    		font-size: 17px;
+
+    		@include MQM(XS) {
+		    	width: 100%;
+		    }
+
+			&:hover, &:focus {
+				border-color: transparent;
+				background-color: #fff;
+			}
+
+			
+		}
+	}
+}
+
+.tab-content{
+	@include MQM(XS) {
+		margin-top: 30px;
+	}
+
+	.tab-pane {
+		font-size: 17px;
+	}
+}
+
+.custom-list {
+	margin: 0;
+	padding: 0;
+	padding: 0 10px;
+
+	li {
+		list-style: none;
+		margin-bottom: 25px;
+	}
+
+	&-item {
+		font-size: 17px;
+		line-height: 20px;
+		padding: 0 15px;
+		display: block;
+		position: relative;
+
+		&:before {
+			content: "";
+			position: absolute;
+			top: 8px;
+			left: 0;
+			width: 8px;
+			height: 8px;
+			background-color: #14ac4e;
+			border-radius: 50%;
+		}
+
+		a {
+			color: #14ac4e;
+			text-decoration: underline;
+		}
+	}
+}
+
+.extra-services {
+	@include display(flex);
+	@include flex-direction(row);
+	@include justify-content(space-between);
+	@include flex-wrap(wrap);
+	margin-bottom: 100px;
+	margin-top: 20px;
+
+	@include MQM(XS) {
+		@include align-items(center);
+	}
+	a {
+		width: 130px;
+		text-align: center;
+		color: #000;
+		text-decoration: underline;
+		font-size: 17px;
+
+		@include MQM(XS) {
+			width: 50%;
+			margin-top: 20px;
+			font-size: 12px;
+		}
+
+		img {
+			@include MQM(XS) {
+				width: 80px;
+			}
+			width: 100%;
+			margin:0 auto 20px;
+			display: block;
+
+		}
+
+		&:hover {
+			text-decoration: none;
+			color: #14ac4e;
+		}
+	}
+}
+
+
+.modal-title {
+	font-family: $font-bold;
+	text-transform: uppercase;
+	color: #14ac4e;
+}
+
+.modal-sm {
+	@include MQ(MD) {
+		width: 400px;
+	}
+}
+
+.modal-header {
+	border-bottom: none;
+	padding-bottom: 0;
+}
+
+label {
+	color: #14ac4e;
+}
+
+.form-control {
+	border-radius: 16px;
+}
+
+
+.breadcrumb {
+	padding: 8px 0;
+	background-color: transparent;
+	margin-bottom: 0;
+
+	& > li + li::before {
+		content: "\2014";
+	}
+}
+
+
+p {
+	font-size: 16px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
